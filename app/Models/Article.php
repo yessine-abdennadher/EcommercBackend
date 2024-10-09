@@ -5,17 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class  categorie extends Model
+class Article extends Model
 {
     use HasFactory;
     protected $fillable = [
         'designation','marque','reference','qtestock','prix',
         'imageart','scategorieID'
         ];
-        public function scategories()
+        public function scategorie()
         {
         return $this->belongsTo(Scategorie::class,"scategorieID");
         }
-
-
 }
